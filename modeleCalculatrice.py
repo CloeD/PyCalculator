@@ -26,13 +26,14 @@ class PyCalculatorModel:
         return resultat
 
     def calculerSousEquation(self, index, liste_equation):
-        a = liste_equation[index - 1]
-        b = liste_equation[index + 1]
-        operation = liste_equation[index]
-        resultat = self.effectuerOperation(self=self, a=a, operation=operation, b=b)
-        liste_equation[index] = resultat
-        liste_equation.pop(index - 1)
-        liste_equation.pop(index)
+        """
+        index: l'index de l'opération qu'il faut effectuer
+        liste_equation: la liste contenant l'équation complète
+        """
+        # Pistes: - utiliser list.pop(i) pour enlever l'équation de la liste
+        #         - modifier liste_equation directement
+        # https://docs.python.org/3/tutorial/datastructures.html
+        
 
     def calculerEquation(self, texte):
         # Séparer la String en plusieurs morceaux
