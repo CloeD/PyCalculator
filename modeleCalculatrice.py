@@ -34,6 +34,10 @@ class PyCalculatorModel:
         #         - modifier liste_equation directement
         # https://docs.python.org/3/tutorial/datastructures.html
         
+        # Supprimer les deux lignes suivantes lorsque votre algorithme sera prêt
+        liste_equation.clear()
+        liste_equation.append(1)
+        
 
     def calculerEquation(self, texte):
         # Séparer la String en plusieurs morceaux
