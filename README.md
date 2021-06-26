@@ -1,6 +1,7 @@
 # PyCalculator
 
 Project created for *[Les Scientifines](https://scientifines.com/en/)*, a nonprofit organisation based in Montreal, for kids to learn programming.
+
 *[Mission](https://scientifines.com/en/mission-et-historique/)   -   [Impact](https://scientifines.com/en/limpact-des-scientifines/)  -  [Contact Les Scientifines](https://scientifines.com/en/nous-joindre/)*
 
 ## Objectives
@@ -21,7 +22,7 @@ Each branch should contain a README explaining the objectives of the session, th
 
 The application **must** be working and operational, except for the educational part. For example, if you want an activity focused on the logic of calculating the equation, the method can simply return 1 when pressing on the equal button, thus showing that the equation is equal to one. 
 
-### Download
+## Download
 
 Participants can simply **go to the branch of their choice** depending on which activity they want to focus on and **download a zip file of the code**. This process is simpler for kids to understand than introducing them to git and its commands.
 
