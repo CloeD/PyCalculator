@@ -24,8 +24,6 @@ class PyCalculatorModel:
             elif operation == '/':
                 resultat = float(a) / float(b)
 
-        
-
         except ZeroDivisionError:
             return "Cannot divide by zero"
 
