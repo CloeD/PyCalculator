@@ -11,25 +11,31 @@ class PyCalculatorModel:
 
     def effectuerOperation(self, a, operation, b):
         resultat = 0
-        if operation == '+':
-            resultat = float(a) + float(b)
+        try:
+            if operation == '+':
+                resultat = float(a) + float(b)
 
-        elif operation == '-':
-            resultat = float(a) - float(b)
+            elif operation == '-':
+                resultat = float(a) - float(b)
 
-        elif operation == '*':
-            resultat = float(a) * float(b)
+            elif operation == '*':
+                resultat = float(a) * float(b)
 
-        elif operation == '/':
-            resultat = float(a) / float(b)
+            elif operation == '/':
+                resultat = float(a) / float(b)
+
+        except ZeroDivisionError:
+            return "Cannot divide by zero"
 
         return resultat
+            
+
 
     def calculerSousEquation(self, index, liste_equation):
         a = liste_equation[index - 1]
         b = liste_equation[index + 1]
         operation = liste_equation[index]
-        resultat = self.effectuerOperation(self=self, a=a, operation=operation, b=b)
+        resultat = self.effectuerOperation(self=self,a=a,operation=operation,b=b)
         liste_equation[index] = resultat
         liste_equation.pop(index - 1)
         liste_equation.pop(index)
@@ -62,7 +68,7 @@ class PyCalculatorModel:
 
             elif '*' in liste_equation:
                 index_mul = liste_equation.index('*')
-                self.calculerSousEquation(self=self, index=index_mul, liste_equation=liste_equation)
+                self.calculerSousEquation(self=self,index=index_mul, liste_equation=liste_equation)
 
 
             elif '/' in liste_equation:
@@ -82,10 +88,12 @@ class PyCalculatorModel:
 
             elif '+' in liste_equation:
                 index_add = liste_equation.index('+')
-                self.calculerSousEquation(self=self, index=index_add, liste_equation=liste_equation)
+                self.calculerSousEquation(self=self,index=index_add, liste_equation=liste_equation)
 
             elif '-' in liste_equation:
                 index_sous = liste_equation.index('-')
-                self.calculerSousEquation(self=self, index=index_sous, liste_equation=liste_equation)
+                self.calculerSousEquation(self=self,index=index_sous, liste_equation=liste_equation)
 
         return liste_equation[0]
+
+
