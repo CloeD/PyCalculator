@@ -12,7 +12,7 @@ The *PyCalcolator* aims to be:
 - Versatile
 - Educational
 - An introduction to different aspects of programming such as conditions, loops, oriented-object programming and understanding variables
-- A sanbox
+- A sandbox
 
 ## How it works
 
